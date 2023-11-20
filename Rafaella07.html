@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07 </title>
+</head>
+
+<body>
+    <h1>Desafio 07 - Calculadora &lpar;função&rpar;</h1>
+
+    <script>
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+        function sub(n1, n2) {
+            return n1 - n2;
+        }
+        function mult(n1, n2) {
+            return n1 * n2;
+        }
+        function div(n1, n2) {
+            return n1 / n2;
+        }
+        let result;
+        let operacao = "";
+        while (operacao !== "sair") {
+            operacao = prompt("Informe a operação desejada: [+, -, *, / ou sair]");
+            if (operacao !== "sair") {
+                let n1 = parseInt(prompt("Informe o primeiro número:"));
+                let n2 = parseInt(prompt("Informe o segundo número: "));
+                switch (operacao) {
+                    case "+":
+                        result = alert(add(n1, n2));
+                        break;
+                    case "-":
+                        result = alert(sub(n1, n2));
+                        break;
+                    case "*":
+                        result = alert(mult(n1, n2));
+                        break;
+                    case "/":
+                        result = alert(div(n1, n2));
+                        break;
+                }
+            }
+        }
+        alert("Até a próxima!");
+    </script>
+</body>
+
+</html>

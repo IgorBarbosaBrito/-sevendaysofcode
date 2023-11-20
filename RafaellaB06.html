@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+</head>
+<body>
+    <h1>Desafio 06 - Lista de compras &lpar;Array &amp; tags para remover&rpar;</h1>
+
+    <script>
+        let limpeza = [];
+        let frutas = [];
+        let laticinios = [];
+        let doces = [];
+        let congelados = [];
+        while (true) {
+            let quantProdutos = limpeza.length + length + laticinios.length + doces.length + congelados.length;
+            let first_ask = "";
+            if (quantProdutos <= 0) {
+                first_ask = prompt("Você deseja adicionar um produto na lista de compras? Responda 'sim' ou 'não'.");
+            } else {
+                first_ask = prompt("Você deseja adicionar um produto na lista de compras? Responda 'sim', 'não' ou 'remover'.");
+            }
+            
+            if (first_ask == "sim") {
+                let produto = prompt("Qual produto você deseja inserir?");
+                let categoria = prompt("Em qual categoria esse produto se encaixa: 'limpeza', 'frutas', 'laticínios', 'doces' ou 'congelados'?");
+
+                if (categoria == "limpeza") {
+                    limpeza.push(produto)
+                } else if (categoria == "frutas") {
+                    frutas.push(produto);
+                } else if (categoria == "laticinios") {
+                    laticinios.push(produto);
+                } else if (categoria == "doces") {
+                    doces.push(produto);
+                } else if (categoria == "congelados") {
+                    congelados.push(produto);
+                } else {
+                    alert("Essa categoria não foi pré-definida.");
+                }
+
+            } else if (first_ask == "não") {
+                alert("Lista de compras: \nLimpeza:" + limpeza + "\nFrutas: " + frutas + "\nLaticínios: " + laticinios + "\nDoces: " + doces + "\nCongelados: " + congelados);
+            } else if (first_ask == "remover") {
+                let produto = prompt("Lista de compras: \nLimpeza:" + limpeza + "\nFrutas: " + frutas + "\nLaticínios: " + laticinios + "\nDoces: " + doces + "\nCongelados: " + congelados + "\n\nQual produto você deseja remover?"); 
+                
+                let indexLimpeza = limpeza.indexOf(produto);
+                let indexFruta = frutas.indexOf(produto);
+                let indexLaticinios = laticinios.indexOf(produto);
+                let indexDoces = doces.indexOf(produto);
+                let indexCongelados = congelados.indexOf(produto);
+                
+                if (indexLimpeza >= 0) {
+                    limpeza.splice(indexLimpeza, 1);
+                    alert("O item " + produto + " foi removido com sucesso!");
+                } else if (indexFruta >= 0) {
+                    frutas.splice(indexFruta, 1);
+                    alert("O item " + produto + " foi removido com sucesso!");
+                } else if (indexLaticinios >= 0) {
+                    laticinios.splice(indexLaticinios, 1);
+                    alert("O item " + produto + " foi removido com sucesso!");
+                } else if (indexDoces >= 0) {
+                    doces.splice(indexDoces, 1);
+                    alert("O item " + produto + " foi removido com sucesso!");
+                } else if (indexCongelados >= 0) {
+                    congelados.splice(indexCongelados, 1);
+                    alert("O item " + produto + " foi removido com sucesso!");
+                } else {
+                    alert("Não foi possível encontrar o item dentro da lista!");
+                }
+            } else {
+                alert("Operação não reconhecida!");
+            }
+        }
+    </script>
+</body>
+</html>

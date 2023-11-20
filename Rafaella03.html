@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+</head>
+<body>
+    <h1>Desafio 03 - Múltiplas escolhas</h1>
+    <script>
+        const tipo = parseInt(prompt("Qual carreira deseja seguir? [1 para Front End ou 2 para Back End]"));
+        if (tipo == 1) {
+            const tipo2 = parseInt(prompt("Nesse caso, você prefere React ou Vue? [1 para React ou 2 para Vue]"));
+            if (tipo2 == 1) {
+                alert("Muito bem! React é uma ótima linguagem!");
+            } else {
+                alert("Cara! vai nessa. Vue é muito dá hora!");
+            }
+        } else {
+            const tipo3 = parseInt(prompt("Nesse caso, você prefere aprender C# ou Java? [1 para C# ou 2 para Java]"));
+            if (tipo3 == 1) {
+                alert("C# é muito irado mano!");
+            } else {
+                alert("Java não é JavaScript, nunca se esqueça!");
+            }
+        }
+        const tipo4 = parseInt(prompt("Você deseja continuar se especializando na área que você escolheu ou deseja se tornar um fullstack? [1 para se especializar ou 2 para fullstack]"));
+        if (tipo4 == 1 ) {
+            alert("Muito bem! você quer ser perito na área!");
+        } else {
+            alert("Brabo demais cara! boa caminhada pra ti.");
+        }
+        let ask = prompt("Tem mais alguma tecnologia que deseja aprender? [sim ou não]");
+        while (ask === "sim") {
+            let tec = prompt("Então informe a tecnologia que deseja aprender: ");
+            alert("Estou impressionado! " + tec + " é uma tecnologia muito top!");
+            ask = prompt("Tem mais alguma tecnologia que deseja aprender? [sim ou não]");
+        }
+    </script>
+</body>
+</html>

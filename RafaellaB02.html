@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+<body>
+    <h1>Desafio 02 - Variáveis, prompt &amp; alert</h1>
+    <script>
+        const nome = prompt("Qual é o seu nome? ");
+        const idade = parseInt(prompt("Informe sua idade: "));
+        const lang = prompt("Informe a linguagem de programação que está aprendendo: ")
+        const msg = ("Olá "+ nome + " você tem " + idade + " anos e " + " está estudando " + lang + ".");
+        alert(msg);
+        const like = parseInt(prompt("Você gosta de estutar " + lang + "? [Informe 1 para sim ou 2 para não]"));
+        if (like == 1) {
+            alert("Que bom! continue praticando que você vai longe.");
+        } else {
+            alert("Sinto muito. Não desista dos seus sonhos!");
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+</head>
+<body>
+    <h1>Desafio 05 - Lista de compras &lpar;Array&rpar;</h1>
+    <script>
+    let limpeza = [];
+    let proteinas = [];
+    let graos = [];
+    let bebidas = [];
+    let frutas = [];
+    let produto = "";
+    let cat = "";
+    let first_ask = "sim";
+        while (first_ask != "não") {
+            first_ask = prompt("Deseja adicionar um produto na sua lista de compras? [sim ou não]");
+            while (first_ask != "sim" && first_ask != "não") {
+                alert("Informe sim ou não!")
+                first_ask = prompt("Deseja adicionar um produto na sua lista de compras? [sim ou não]");
+            }
+            if (first_ask === "não") {
+                break;
+            }
+            produto = prompt("Informe o produto: ");
+            cat = prompt("Em qual categoria " + produto + " se enquadra [limpeza, proteinas, graos, bebidas ou frutas]? ");
+            if (cat === "limpeza") {
+                limpeza.push(produto);
+            } else if (cat === "proteinas") {
+                proteinas.push(produto);
+            } else if (cat === "graos") {
+                graos.push(produto);
+            } else if (cat === "bebidas") {
+                bebidas.push(produto);
+            } else if (cat === "frutas") {
+                frutas.push(produto);
+            }
+        }
+        alert("Lista de compras:\n " + "\n Limpeza: " + limpeza + " \n Proteínas: " + proteinas + "\n Grãos: " + graos + " \n Bebidas: " + bebidas + " \nFrutas: " + frutas);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04 - Advinhe o número da máquina</title>
+</head>
+
+<body>
+    <h1>Desafio 04 - Advinhe o número da máquina</h1>
+    <script>
+        let n = 7;
+        let chute;
+        chute = parseInt(prompt("Chute um valor: "));
+        if (chute !== n) {
+            chute = parseInt(prompt("Outra chance: "));
+            if (chute == n) {
+                alert("Parabéns, eu estava pensando no n° " + n + "!")
+            } else {
+                chute = parseInt(prompt("Última chance: "));
+                if (chute !== n) {
+                    alert("Acabou suas tentativas. O n° era " + n + "!")
+                } else {
+                    alert("Parabéns, eu estava pensando no n° " + n + "!")
+                }
+            }
+        } else {
+            alert("Parabéns, eu estava pensando no n° " + n + "!")
+        }
+    </script>
+</body>
+
+</html>
